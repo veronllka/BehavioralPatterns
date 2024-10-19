@@ -10,7 +10,7 @@ namespace StateDemo
     {
         private string _login;
         private string _password;
-        private IState _state;
+        
 
         public string Login { get => _login; }
         public string Password
@@ -35,6 +35,13 @@ namespace StateDemo
             return $"{Login}: находится в состоянии: {_state}";
         }
 
+        #region реализация паттерна
+        private IState _state; //интерфейсная внутрення переменная состояния
+        /// <summary>
+        /// метод передачи сообщения пользователя делегирует выполнение методу 
+        /// конкретного состояния
+        /// </summary>
+        /// <param name="message"></param>
         public void SendMessage(string message)
         {
             _state.SendMessage(message);
@@ -43,5 +50,6 @@ namespace StateDemo
         {
             _state = state;
         }
+        #endregion
     }
 }

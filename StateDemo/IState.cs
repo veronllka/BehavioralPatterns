@@ -6,11 +6,18 @@ using System.Threading.Tasks;
 
 namespace StateDemo
 {
+    /// <summary>
+    /// общий интерфейс для все возможных состояний, 
+    /// которые обязуются иметь функционал передачи сообщений
+    /// </summary>
     internal interface IState
     {
         void SendMessage(string message);
     }
 
+    /// <summary>
+    /// активное состояние
+    /// </summary>
     public class ActiveState : IState
     {
         public void SendMessage(string message)
@@ -24,6 +31,10 @@ namespace StateDemo
             return "активный";
         }
     }
+
+    /// <summary>
+    /// заблокированное состояние
+    /// </summary>
     public class BannedState : IState
     {
         public void SendMessage(string message)
@@ -37,6 +48,9 @@ namespace StateDemo
             return "заблокированный";
         }
     }
+    /// <summary>
+    /// состояние ожидания
+    /// </summary>
     public class SuspendedState : IState
     {
         public void SendMessage(string message)

@@ -12,17 +12,24 @@ using System.Windows.Shapes;
 
 namespace CommandDemo
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+    /*
+     пример реализации паттерна команда (https://refactoringguru.cn/ru/design-patterns/command)
+    в простом текстовом поле по мере вводу осуществляется возможность отмены ввода и восстановления
+    предыдущего состояния путем хранения команд в стеке
+     */
     public partial class MainWindow : Window
     {
+        // подключение менеджера команд для управления операциями
         private readonly CommandManager _commandManager = new CommandManager();
         public MainWindow()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// обрабатывается событие предварительного просмотра введеного текста в текстовое поле
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e">вводимый текст</param>
         private void textBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             var command = new AddTextCommand((TextBox)sender, e.Text);

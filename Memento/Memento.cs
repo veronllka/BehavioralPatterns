@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace Memento
 {
+     /// <summary>
+     /// снимок состояния пользователя:
+     /// есть поля для сохранения данных по паролю и роли.
+     /// если возможность получить сохраненные данные
+     /// </summary>
     internal class Memento
     {
         private string _savedPassword;

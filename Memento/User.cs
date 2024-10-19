@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Memento
 {
+    /// <summary>
+    /// категории учеток пользователей: админская, обычная и гостевая
+    /// </summary>
     enum UserRole { Admin, User, Guest}
 
     internal class User
@@ -14,7 +17,7 @@ namespace Memento
         private string _login;
         private string _password;  
         private UserRole _role;
-        private Caretaker _caretacker = new Caretaker();
+       
 
         public string Login { get => _login; }
         public string Password
@@ -40,13 +43,23 @@ namespace Memento
             Role = role;
         }
 
+        #region реализация паттерна
+
+        private Caretaker _caretacker = new Caretaker(); //закрытое поле для управления доступом к снимку состояния
+        /// <summary>
+        /// сохранение текущего состояния пользователя (пароль и роль)
+        /// </summary>
         public void SaveState()
         {
             _caretacker.Memento = new Memento(this._password, this._role);
         }
+        /// <summary>
+        /// восстановление ранее сохраненного состояния (пароль и роль)
+        /// </summary>
         public void LoadState()
         {
             _password = _caretacker.Memento.GetSavedState(out _role);
         }
+        #endregion
     }
 }
