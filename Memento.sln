@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Memento", "Memento\Memento.csproj", "{B86E08D1-98DC-4C53-B1CC-0F2C6FAF751F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StateDemo", "StateDemo\StateDemo.csproj", "{CF7E1F1C-86DC-43C2-8F7A-E07D658DFAC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandDemo", "CommandDemo\CommandDemo.csproj", "{796292D9-7844-49A4-9E90-71EF7CA60512}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B86E08D1-98DC-4C53-B1CC-0F2C6FAF751F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B86E08D1-98DC-4C53-B1CC-0F2C6FAF751F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B86E08D1-98DC-4C53-B1CC-0F2C6FAF751F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B86E08D1-98DC-4C53-B1CC-0F2C6FAF751F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF7E1F1C-86DC-43C2-8F7A-E07D658DFAC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF7E1F1C-86DC-43C2-8F7A-E07D658DFAC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF7E1F1C-86DC-43C2-8F7A-E07D658DFAC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF7E1F1C-86DC-43C2-8F7A-E07D658DFAC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{796292D9-7844-49A4-9E90-71EF7CA60512}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{796292D9-7844-49A4-9E90-71EF7CA60512}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{796292D9-7844-49A4-9E90-71EF7CA60512}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{796292D9-7844-49A4-9E90-71EF7CA60512}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CD8BA2AC-CF67-4397-A7C8-3FA121A08298}
+	EndGlobalSection
+EndGlobal
